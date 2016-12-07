@@ -32,6 +32,8 @@ def get_urllist():
 def get_Content():
 	
 	while True:
+		os.mkdir('凡人修仙传')
+		os.chdir('凡人修仙传')
 		for i in get_urllist():
 			n = []
 			urls = i[0]
@@ -48,7 +50,8 @@ def get_Content():
 			content = re.findall(t,html)[0]
 			content = content.replace('&nbsp;','')
 			content = content.replace('<br />','')
-			os.chdir('C:\\Users\\Administrator.WQ-20160501NYYU\\Desktop\\frxxz')
+#			os.mkdir('凡人修仙传')这样每次都会创建一个目录，最后是一个循环嵌套的目录结构，
+#			os.chdir('凡人修仙传')
 			with open(title+'.txt','w') as f: #保证出现问题也能把打开文件关闭，使用的是with函数
 				f.write(content)
 			if urls == '9388271.html':

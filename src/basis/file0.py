@@ -27,3 +27,7 @@ f = open('C:\\Users\\Administrator.WQ-20160501NYYU\\Desktop\\py\\text.txt','w')
 f.write('到底可不可以写入')
 f.write('在写入一行新字符')
 f.close
+
+e = open('C:\\Users\\Administrator.WQ-20160501NYYU\\Desktop\\py\\OpenMe.mp3')
+print(e.read())
+e.close
